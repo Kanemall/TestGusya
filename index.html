@@ -2,26 +2,29 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>推しえん</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/main.css"
 </head>
 <body>
-    <h1>推しえん</h1>
-    <h2>推しにエ～ル</h2>h2>
-    <select id="dropdown"></select>
+    <header>
+        <h1>推しえん</h1>
+    </header>
+    <div id="OshiSelector">
+        <select id="dropdown"></select>
+        <div id="selectText">推し！</div>
+    </div>
     <script>
-        fetch('oshiList.json')
+        fetch('./json/OshiList.json')
         .then(response => response.json())
         .then(data => {
             const dropdown = document.getElementById("dropdown");
-            data.forEach(item =>{
+            data.forEach(item => {
                 const option = document.createElement("option");
-                option.value = item.value;
-                option.textContent = item.label;
+                option.value = item.ids;
+                option.textContent = item.name;
                 dropdown.appendChild(option);
             });
         })
-        .catch(error => console.error("Inputed Json File:",error));
+        .catch(error => console.error("Inputed Json File:", error));
     </script>
 </body>
 </html>

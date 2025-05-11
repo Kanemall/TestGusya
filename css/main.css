@@ -1,0 +1,80 @@
+/* モバイル最適化の基本設定 */
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    background-color: #FDF4F5;
+    font-family: "Rounded Mplus 1c", "Hiragino Maru Gothic ProN", "Arial Rounded MT Bold", "Segoe UI", sans-serif;
+    color: #003092;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /* ヘッダー */
+  header {
+    background-color: #003092;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+  }
+  
+  /* ヘッダー内のテキスト */
+  header h1 {
+    color: #FDF4F5;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* 推し選択エリア */
+  #OshiSelector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+    font-size: large;
+  }
+  
+  #dropdown {
+    width: 120px;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+    padding: 5px 10px;
+    
+    /* デフォルト矢印を非表示（クロスブラウザ対応） */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    /* 独自スタイルで見た目調整するなら背景色なども */
+    background-color: #ffffff;
+    border: 1.5px solid #003092;
+    border-radius: 5px;
+  }
+  /* メディアクエリでスマホ向けサイズを調整 */
+  @media (max-width: 480px) {
+    header {
+      height: 30px;
+    }
+  
+    header h1 {
+      font-size: 1.2rem;
+    }
+  
+    body {
+      font-size: 15px;
+    }
+  }
+  

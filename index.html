@@ -2,22 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My First GitHub Page</title>
+  <title>推しえん</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p id="message">ボタンを押してね</p>
-  <button onclick="showMessage()">Click me</button>
-  <script src="script.js"></script>
-  <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1RIkRUGb5KTQhrbsSSEjvaTa"
-  publishable-key="pk_test_51RIkAbGb5KTQhrbs5s00RscVgQFqIu6LPndhJGQWLikYyBtZ3IMDtZAmCXkqSjdmO3N3FOj8eeAnOhyGPrterK1a00VHp1KWS6"
->
-</stripe-buy-button>
+    <h1>推しえん</h1>
+    <h2>推しにエ～ル</h2>h2>
+    <select id="dropdown"></select>
+    <script>
+        fetch('oshiList.json')
+        .then(response => response.json())
+        .then(data => {
+            const dropdown = document.getElementById("dropdown");
+            data.forEach(item =>{
+                const option = document.createElement("option");
+                option.value = item.value;
+                option.textContent = item.label;
+                dropdown.appendChild(option);
+            });
+        })
+        .catch(error => console.error("Inputed Json File:",error));
+    </script>
 </body>
 </html>

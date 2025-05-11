@@ -13,7 +13,7 @@
         <div id="selectText">推し！</div>
     </div>
     <script>
-        fetch('./json/OshiList.json')
+        fetch('OshiList.json')
         .then(response => response.json())
         .then(data => {
             const dropdown = document.getElementById("dropdown");

@@ -5,10 +5,14 @@
         "page":"./oshis/gusya.html"
     },
     {
+        "ids":"0001",
+        "name":"ぐしゃ",
+        "page":"./oshis/gusya.html"
+    },
+    {
         "ids":"0002",
         "name":"ぐしゃ2",
         "page":"./oshis/gusya2.html"
     }
-
 ]
 
